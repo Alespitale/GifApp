@@ -1,0 +1,154 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+*{
+  scrollbar-width: none;
+}
+
+body{
+  display:flex;
+  max-width:100%;
+  background-color: rgb(21, 20, 20);
+  justify-content:center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color:white;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding:15px;
+}
+
+input{
+  background-color: black;
+  color: white;
+  border:none;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  height:1px;
+  width:90%;
+}
+
+.input-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:20px;
+  min-width:250px;
+}
+
+.input-bar{
+  width:60%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  border: 1px solid rgb(97, 32, 158);
+  color: black;
+  background-color: black;
+}
+
+.category-container{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin:15px; 
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
+}
+
+.card p {
+  color:white;
+  text-align: center;
+  font-size: 1rem;
+  margin:5px;
+  padding: 5px;
+}
+
+.card img {
+  border-radius:10px;
+  width: 100%;
+  max-width:320px;
+  max-height:300px;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  border: 2px solid #000;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.03);
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: 5.5rem;
+  text-align: center;
+  max-width: 100%;
+  text-transform: uppercase;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 4px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.title:nth-child(1){
+stroke: #4D163D;
+animation-delay: -1s;
+}
+
+.title:nth-child(2){
+stroke: #840037;
+animation-delay: -2s;
+}
+
+.title:nth-child(3){
+stroke: #BD0034;
+animation-delay: -3s;
+}
+
+.title:nth-child(4){
+stroke: #BD0034;
+animation-delay: -4s;
+}
+
+.title:nth-child(5){
+stroke: #FDB731;
+animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+svg {
+  display: block;
+  font: 10.5em 'GifApp';
+}
