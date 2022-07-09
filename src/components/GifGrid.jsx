@@ -1,6 +1,7 @@
 import { useFetchGif } from "../hooks/useFetchGif";
 import { GifItem } from "./GifItem";
 import { ButtonGeneral } from "./ButtonGeneral";
+import Spinner from "react-bootstrap/Spinner";
 
 export const GifGrid = ({ category, clear }) => {
   const { img, loading } = useFetchGif(category);
@@ -9,13 +10,15 @@ export const GifGrid = ({ category, clear }) => {
     <>
       <div className="category-container">
         <h3>{category}</h3>
-        <ButtonGeneral onClick={() => clear(category)} variant="outlined">
+        <ButtonGeneral onClick={() => clear(category)}>
           DELETE
         </ButtonGeneral>
       </div>
       <div className="card-grid">
         {loading ? (
-          <h2>Cargando...</h2>
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
         ) : (
           img.map((imagen) => <GifItem key={imagen.id} {...imagen} />)
         )}

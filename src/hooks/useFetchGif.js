@@ -12,7 +12,7 @@ export const useFetchGif = (category) => {
 
   useEffect(() => {
     getImgs();
-  });
+  },[category]);
 
   return {
     img,

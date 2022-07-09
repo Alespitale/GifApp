@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const AddCategory = ({ addCategory, categories }) => {
+export const AddCategory = ({ addCategory, categories, danger }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = ({ target }) => setInputValue(target.value);
@@ -8,7 +8,7 @@ export const AddCategory = ({ addCategory, categories }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue.trim().length < 1) return;
-    if (categories.includes(inputValue)) return alert("Already Searched!")
+    if (categories.includes(inputValue)) return alert("You already searched that!");
     addCategory(inputValue.trim());
     setInputValue("");
   };

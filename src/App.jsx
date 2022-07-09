@@ -4,7 +4,7 @@ import { GifGrid } from "./components/GifGrid";
 import { ButtonGeneral } from "./components/ButtonGeneral";
 import { LiveTitle } from "./components/LiveTitle";
 
-export const GifApp = () => {
+export const App = () => {
   const [categories, setCategories] = useState([]);
 
   const handleAddCategory = (value) => {
@@ -26,7 +26,6 @@ export const GifApp = () => {
     <>
       {/* Title */}
       <LiveTitle />
-
       {/* Input */}
       <div className="input-bar-container">
         <div className="input-bar">
@@ -34,6 +33,7 @@ export const GifApp = () => {
         </div>
         <ButtonGeneral onClick={handleResetList} variant="outlined">RESET</ButtonGeneral>
       </div>
+
       {/* List of GIFS */}
       <div>
         {categories.map((category) => (<GifGrid key={category} category={category} clear={handleDeleteGifs} />))}
