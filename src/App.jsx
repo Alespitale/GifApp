@@ -29,7 +29,7 @@ export const App = () => {
       {/* Input */}
       <div className="input-bar-container">
         <div className="input-bar">
-          <AddCategory addCategory={handleAddCategory} categories={categories} />
+          <AddCategory addCategory={handleAddCategory} categoryName={categories} />
         </div>
         <ButtonGeneral onClick={handleResetList} variant="outlined">RESET</ButtonGeneral>
       </div>

@@ -1,7 +1,7 @@
 import { useFetchGif } from "../hooks/useFetchGif";
 import { GifItem } from "./GifItem";
 import { ButtonGeneral } from "./ButtonGeneral";
-import Spinner from "react-bootstrap/Spinner";
+import PropTypes from 'prop-types'
 
 export const GifGrid = ({ category, clear }) => {
   const { img, loading } = useFetchGif(category);
@@ -10,15 +10,11 @@ export const GifGrid = ({ category, clear }) => {
     <>
       <div className="category-container">
         <h3>{category}</h3>
-        <ButtonGeneral onClick={() => clear(category)}>
-          DELETE
-        </ButtonGeneral>
+        <ButtonGeneral onClick={() => clear(category)}>DELETE</ButtonGeneral>
       </div>
       <div className="card-grid">
         {loading ? (
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
+          <h2>Loading...</h2>
         ) : (
           img.map((imagen) => <GifItem key={imagen.id} {...imagen} />)
         )}
@@ -26,3 +22,7 @@ export const GifGrid = ({ category, clear }) => {
     </>
   );
 };
+
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired
+}
