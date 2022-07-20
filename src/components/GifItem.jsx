@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { GifModal } from "./GifModal";
+import PropTypes from "prop-types";
 
 export const GifItem = ({ title, url }) => {
   const [show, setShow] = useState(false);
@@ -8,8 +9,13 @@ export const GifItem = ({ title, url }) => {
 
   return (
     <div className="card">
-      <img src={url} alt="gif" onClick={handleShow}/>
-      <GifModal url={url} title={title} show={show} onHide={handleClose}/>
+      <img src={url} alt={title} onClick={handleShow} />
+      <GifModal url={url} title={title} show={show} onHide={handleClose} />
     </div>
   );
+};
+
+GifItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };

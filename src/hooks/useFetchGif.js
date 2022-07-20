@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getGifs } from "../helpers/getGifs";
+import PropTypes from "prop-types";
 
 export const useFetchGif = (category) => {
   const [img, setImg] = useState([]);
@@ -11,11 +12,15 @@ export const useFetchGif = (category) => {
   };
 
   useEffect(() => {
-    getImgs();
-  },[category]);
+    getImgs(); // eslint-disable-next-line
+  }, []);
 
   return {
     img,
     loading,
   };
+};
+
+useFetchGif.propTypes = {
+  category: PropTypes.string.isRequired,
 };

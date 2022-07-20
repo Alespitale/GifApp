@@ -1,4 +1,6 @@
-export const handleDownload = async ({ url, title }) => {
+import PropTypes from 'prop-types'
+
+export const getDownload = async ({ url, title }) => {
   try {
     const response = await fetch(url);
     const file = await response.blob();
@@ -15,3 +17,8 @@ export const handleDownload = async ({ url, title }) => {
     alert(error.message);
   }
 };
+
+getDownload.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
+}

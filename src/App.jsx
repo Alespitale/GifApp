@@ -20,24 +20,27 @@ export const App = () => {
     const newList = [...categories];
     newList.splice(index, 1);
     setCategories(newList);
-  }
+  };
 
   return (
     <>
-      {/* Title */}
       <LiveTitle />
-      {/* Input */}
+      
       <div className="input-bar-container">
         <div className="input-bar">
-          <AddCategory addCategory={handleAddCategory} categoryName={categories} />
+          <AddCategory
+            addCategory={handleAddCategory}
+            categoryName={categories}
+          />
         </div>
-        <ButtonGeneral onClick={handleResetList} variant="outlined">RESET</ButtonGeneral>
+        <ButtonGeneral data-testid='reset button' onClick={handleResetList}>
+          RESET
+        </ButtonGeneral>
       </div>
 
-      {/* List of GIFS */}
-      <div>
-        {categories.map((category) => (<GifGrid key={category} category={category} clear={handleDeleteGifs} />))}
-      </div>
+      {categories.map((category) => (
+        <GifGrid key={category} category={category} clear={handleDeleteGifs} />
+      ))}
     </>
   );
 };

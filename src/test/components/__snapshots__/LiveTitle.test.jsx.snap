@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of LiveTitle Should match with snapshot 1`] = `
+<div>
+  <div
+    class="title-container"
+  >
+    <svg
+      viewBox="0 0 960 100"
+    >
+      <symbol
+        id="s-text"
+      >
+        <text
+          text-anchor="middle"
+          x="50%"
+          y="80%"
+        >
+          Gifinder
+        </text>
+      </symbol>
+      <g
+        class="g-ants"
+      >
+        <use
+          class="title"
+          xlink:href="#s-text"
+        />
+        <use
+          class="title"
+          xlink:href="#s-text"
+        />
+        <use
+          class="title"
+          xlink:href="#s-text"
+        />
+        <use
+          class="title"
+          xlink:href="#s-text"
+        />
+        <use
+          class="title"
+          xlink:href="#s-text"
+        />
+      </g>
+    </svg>
+  </div>
+</div>
+`;

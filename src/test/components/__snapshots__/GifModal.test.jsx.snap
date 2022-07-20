@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test of GifModal Should render the modal 1`] = `
+<body
+  class="modal-open"
+  data-rr-ui-modal-open=""
+  style="padding-right: 1024px;"
+>
+  <div>
+    <div />
+  </div>
+  <div
+    class="fade modal-backdrop show"
+  />
+  <div
+    aria-modal="true"
+    class="fade modal-content modal show"
+    role="dialog"
+    style="display: block; padding-right: 0px;"
+    tabindex="-1"
+  >
+    <div
+      class="modal-dialog"
+    >
+      <div
+        class="modal-content"
+      >
+        <div
+          class="modal-header modal-header"
+        >
+          <div
+            class="modal-title modal-title h4"
+          >
+            Dragon Ball
+          </div>
+          <button
+            class="close-btn"
+            data-testid="close button"
+          >
+            x
+          </button>
+        </div>
+        <div
+          class="modal-body"
+        >
+          <div>
+            <img
+              alt="Dragon Ball"
+              src="https://dragonball.com/goku.jpg"
+            />
+          </div>
+          <button
+            class="download-btn"
+            data-testid="download button"
+          >
+            Download
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
