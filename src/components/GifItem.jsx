@@ -8,9 +8,9 @@ export const GifItem = ({ title, url }) => {
   const handleShow = () => setShow(true);
 
   return (
-    <div className="card">
+    <div className="card-item">
       <img src={url} alt={title} onClick={handleShow} />
-      <GifModal url={url} title={title} show={show} onHide={handleClose} />
+      <GifModal url={url} title={title} show={show} onHide={handleClose}/>
     </div>
   );
 };

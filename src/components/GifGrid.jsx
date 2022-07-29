@@ -9,12 +9,14 @@ export const GifGrid = ({ category, clear }) => {
   return (
     <>
       <div className="category-container">
-        <h3>{category}</h3>
-        <ButtonGeneral data-testid='delete button' onClick={() => clear(category)}>DELETE</ButtonGeneral>
+        <div className="shadowBox"><h3 className="rainbow rainbow_text_animated">{category}</h3></div>
+        <ButtonGeneral data-testid='delete button' onClick={() => clear(category)}>CLEAR</ButtonGeneral>
       </div>
       <div className="card-grid">
         {loading ? (
-          <h2>Loading...</h2>
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
         ) : (
           img.map((imagen) => <GifItem key={imagen.id} {...imagen} />)
         )}

@@ -10,5 +10,6 @@ export const ButtonGeneral = styled.button`
   cursor: pointer;
   &:hover {
     color: white;
+    transition: 1s;
   }
 `;

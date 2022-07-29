@@ -1,10 +1,11 @@
 import Modal from "react-bootstrap/Modal";
 import { getDownload } from "../helpers/getDownload";
 import PropTypes from "prop-types";
+import { DownloadIcon } from "./icons/Download.jsx";
+import { CloseIcon } from "./icons/Close.jsx";
 
 export const GifModal = ({ url, title, show, onHide }) => {
   return (
-    <div>
       <Modal className="modal-content" show={show}>
         <Modal.Header className="modal-header">
           <Modal.Title className="modal-title">{title}</Modal.Title>
@@ -13,7 +14,7 @@ export const GifModal = ({ url, title, show, onHide }) => {
             className="close-btn"
             onClick={onHide}
           >
-            x
+            <CloseIcon />
           </button>
         </Modal.Header>
         <Modal.Body>
@@ -25,11 +26,10 @@ export const GifModal = ({ url, title, show, onHide }) => {
             className="download-btn"
             onClick={() => getDownload({ url, title })}
           >
-            Download
+            <DownloadIcon />
           </button>
         </Modal.Body>
       </Modal>
-    </div>
   );
 };
 

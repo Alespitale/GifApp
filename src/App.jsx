@@ -3,6 +3,7 @@ import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 import { ButtonGeneral } from "./components/ButtonGeneral";
 import { LiveTitle } from "./components/LiveTitle";
+import { toast } from "react-toastify";
 
 export const App = () => {
   const [categories, setCategories] = useState([]);
@@ -12,7 +13,10 @@ export const App = () => {
   };
 
   const handleResetList = () => {
-    setCategories([]);
+    if (categories.length > 0) {
+      setCategories([]);
+      toast("All categories have been removed", { type: "success" });
+    }
   };
 
   const handleDeleteGifs = (category) => {
@@ -20,12 +24,19 @@ export const App = () => {
     const newList = [...categories];
     newList.splice(index, 1);
     setCategories(newList);
+    toast(`${category.toUpperCase()} was deleted`, { type: "succes" });
   };
+
+  const useDarkMode = () => {
+    document.querySelector('.moon').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  }
 
   return (
     <>
-      <LiveTitle />
-      
+      <LiveTitle/>
+      <div className="moon" onClick={useDarkMode}></div>
       <div className="input-bar-container">
         <div className="input-bar">
           <AddCategory
@@ -33,7 +44,7 @@ export const App = () => {
             categoryName={categories}
           />
         </div>
-        <ButtonGeneral data-testid='reset button' onClick={handleResetList}>
+        <ButtonGeneral data-testid="reset button" onClick={handleResetList}>
           RESET
         </ButtonGeneral>
       </div>
