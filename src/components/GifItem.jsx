@@ -9,7 +9,7 @@ export const GifItem = ({ title, url }) => {
 
   return (
     <div className="card-item">
-      <img src={url} alt={title} onClick={handleShow} />
+      <img loading="lazy" src={url} alt={title} onClick={handleShow} />
       <GifModal url={url} title={title} show={show} onHide={handleClose}/>
     </div>
   );

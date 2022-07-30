@@ -6,17 +6,15 @@ export const useFetchGif = (category) => {
   const [img, setImg] = useState([]);
   const [loading, setLoading] = useState(true);
   const getImgs = async () => {
-    const newImgs = await getGifs(category);
-    Promise.all(newImgs).then(() => {
-      setImg(newImgs);
-      setLoading(false);
-    });
+  const newImgs = await getGifs(category);
+  setImg(newImgs);
+  setLoading(false);
   };
 
   useEffect(() => {
     getImgs(); // eslint-disable-next-line
   }, []);
-
+  
   return {
     img,
     loading,

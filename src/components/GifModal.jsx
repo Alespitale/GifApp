@@ -19,7 +19,7 @@ export const GifModal = ({ url, title, show, onHide }) => {
         </Modal.Header>
         <Modal.Body>
           <div>
-            <img src={url} alt={title} />
+            <img loading="lazy" src={url} alt={title} />
           </div>
           <button
             data-testid="download button"
