@@ -58,13 +58,14 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 .input-bar {
-  width: 60%;
+  width: 100%;
+  max-width: 1000px;
   padding: 10px;
-  margin-right: 5px;
+  margin: 10px;
   font-size: 1.2rem;
   border-radius: 30px;
   border: 1px solid rgb(97, 32, 158);
@@ -95,7 +96,7 @@ input {
   align-content: center;
   align-items: center;
   overflow: hidden;
-  padding: 15px;
+  padding: 30px;
   border-radius: 10px;
 }
 
@@ -190,7 +191,7 @@ button:hover {
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 4.5rem;
   text-align: center;
   max-width: 15vh;
   text-transform: uppercase;
