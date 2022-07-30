@@ -11,6 +11,32 @@
   --moon: url("./images/moon.png");
 }
 
+body {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-content: center;
+  overflow-y: scroll;
+  transition: 1.2s;
+  background-color: var(--LightMode);
+  fill: var(--LightMode);
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+input {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 12px;
+  height: 1px;
+  width: 100%;
+}
+
 .moon {
   background-image: var(--moon);
   position: absolute;
@@ -28,52 +54,17 @@
   fill: var(--DarkMode);
 }
 
-body {
-  fill: var(--LightMode);
-  display: flex;
-  max-width: 100%;
-  background-color: var(--LightMode);
-  justify-content: center;
-  transition: 1s;
-}
-
-h2 {
-  font-size: 3.5rem;
-  color: white;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-size: 3.5rem;
-  color: black;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-input {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border: none;
-  outline: none;
-  font-size: 1.2rem;
-  padding: 10px;
-  height: 1px;
-  width: 90%;
-}
-
 .input-bar-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  width: 100vw;
-  min-width: 210px;
+  margin-top: 1rem;
 }
 
 .input-bar {
   width: 60%;
   padding: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: 1.2rem;
   border-radius: 30px;
   border: 1px solid rgb(97, 32, 158);
@@ -88,11 +79,13 @@ input {
 }
 
 .card-grid {
-  margin: 20px;
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid white;
 }
 
 .card-item {
@@ -102,22 +95,12 @@ input {
   align-content: center;
   align-items: center;
   overflow: hidden;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
 }
 
 .card-item:hover{
   transform: scale(1.5rem);
-}
-
-.card-item p {
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  max-width: 300px;
-  font-size: 1rem;
-  margin: 5px;
-  padding: 5px;
 }
 
 .card-item img {
@@ -129,25 +112,21 @@ input {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
 }
 .card-item img:hover{
-  transform: scale(1.5);
-  transition: 2.5s;
+  transform: scale(1.2);
+  transition: 1.2s;
 }
 
 .modal-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.55);
-  border-radius: 10px;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.50);
   width: 100%;
   height: 100%;
-  position: fixed;
   top:0;
   left: 0;
-  right: 0;
-  transition: 0.5s;
+  transition: 1s;
 }
+
 .modal-content img {
   width: 100%;
   border-radius: 15px;
@@ -156,33 +135,29 @@ input {
 
 .modal-title{
   font-size: 1rem;
+  max-width: 75%;
   text-align: center;
   color:white;
   text-transform: uppercase;
 }
 
 .modal-header{
-  display: flex;
-  flex-direction: row;
+  width: 100%;
   justify-content: space-between;
-  align-items: center;
-  max-width: fit-content;
   border-bottom: 1px solid white;
 }
 
 .close-btn {
-  width: 2rem;
-  height: 2rem;
+  display: flex;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  margin: 1rem;
-  display:flex;
   align-items:center;
   justify-content:center;
   background-color: transparent;
   color: white;
   cursor: pointer;
   border: 1px solid rgb(97, 32, 158);
-  opacity: 0.6;
 }
 
 button:hover {
@@ -192,9 +167,9 @@ button:hover {
 }
 
 .download-btn{
-  width: 4rem;
-  height: 2rem;
-  padding: 20px;
+  width: 5rem;
+  height: 3rem;
+  padding: 5px;
   border-radius: 30px;
   margin-top: 1rem;
   display:flex;
@@ -203,7 +178,6 @@ button:hover {
   cursor: pointer;
   background-color: transparent;
   color:white;
-  opacity: 0.6;
   border: 1px solid rgb(97, 32, 158);
   margin-left:auto;
   margin-right:auto;
@@ -212,11 +186,11 @@ button:hover {
 .title-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .title {
-  font-size: 6rem;
+  font-size: 5rem;
   text-align: center;
   max-width: 15vh;
   text-transform: uppercase;
@@ -262,7 +236,6 @@ svg {
   font: 10.5em 'GifApp';
 }
 
-
 #shadowBox {
   background-color: rgb(0, 0, 0);
   /* Fallback color */
@@ -277,7 +250,7 @@ svg {
   font-size: 40px;
   font-family: monospace;
   letter-spacing: 5px;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .rainbow_text_animated {
   background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
