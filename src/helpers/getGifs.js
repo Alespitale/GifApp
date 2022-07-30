@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+
 export const getGifs = async (category) => {
   const API_KEY = "8qUeVcS0xJkgNHdnO7RCqnIrohsbULUl";
 
@@ -12,7 +13,7 @@ export const getGifs = async (category) => {
   const gifs = data.map((img) => ({
     id: img.id,
     title: img.title,
-    url: img.images.original.url,
+    url: img.images.fixed_height.url,
   }));
 
   return gifs;
