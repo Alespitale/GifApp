@@ -13,13 +13,11 @@
 
 body {
   justify-content: center;
-  align-items: center;
   display: flex;
-  align-content: center;
   overflow-y: scroll;
   transition: 1.2s;
-  background-color: var(--LightMode);
-  fill: var(--LightMode);
+  min-height: 100vh;
+  background: linear-gradient( rgb(2, 2, 2, 0.9),rgba(253, 164, 0, 0.6), rgba(34, 162, 34, 0.6),rgba(61, 61, 200, 0.6),rgba(128, 0, 128, 0.6), rgb(2, 2, 2, 0.9));
 }
 
 h3 {
@@ -49,9 +47,9 @@ input {
 }
 
 .dark-mode{
-  background-color: var(--DarkMode);
+  background: var(--DarkMode);
   --moon: var(--sun);
-  fill: var(--DarkMode);
+  transition: 1s;
 }
 
 .input-bar-container {
