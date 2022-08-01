@@ -31,53 +31,23 @@ exports[`Test of GifModal Should render the modal 1`] = `
           >
             Dragon Ball
           </div>
-          <button
-            class="close-btn"
+          <span
+            class="lnr lnr-cross-circle"
             data-testid="close button"
-          >
-            <svg
-              class="bi bi-x"
-              fill="white"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-              />
-            </svg>
-          </button>
+          />
         </div>
         <div
           class="modal-body"
         >
-          <div>
-            <img
-              alt="Dragon Ball"
-              src="https://dragonball.com/goku.jpg"
-            />
-          </div>
-          <button
-            class="download-btn"
+          <img
+            alt="Dragon Ball"
+            loading="lazy"
+            src="https://dragonball.com/goku.jpg"
+          />
+          <span
+            class="lnr lnr-download"
             data-testid="download button"
-          >
-            <svg
-              class="bi bi-download"
-              fill="white"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
-              />
-              <path
-                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
-              />
-            </svg>
-          </button>
+          />
         </div>
       </div>
     </div>

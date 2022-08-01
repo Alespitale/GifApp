@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 export const getDownload = async ({ url, title }) => {
   try {
@@ -20,5 +20,5 @@ export const getDownload = async ({ url, title }) => {
 
 getDownload.propTypes = {
   title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
-}
+  url: PropTypes.string.isRequired,
+};

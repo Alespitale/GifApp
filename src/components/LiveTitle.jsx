@@ -1,3 +1,5 @@
+import "../styles/LiveTitle.css";
+
 export const LiveTitle = () => {
   return (
     <div className="title-container">

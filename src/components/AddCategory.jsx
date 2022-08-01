@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropType from "prop-types";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const AddCategory = ({ addCategory, categoryName }) => {
   const [inputValue, setInputValue] = useState("");
@@ -10,9 +10,10 @@ export const AddCategory = ({ addCategory, categoryName }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (inputValue.trim().length < 1) return toast('Please search something', { type: 'error' });
+    if (inputValue.trim().length < 1)
+      return toast("Please search something", { type: "error" });
     if (categoryName.includes(inputValue)) {
-      return toast('You have already searched for that', { type: 'warning' });
+      return toast("You have already searched for that", { type: "warning" });
     }
     addCategory(inputValue.trim());
     setInputValue("");
@@ -20,15 +21,15 @@ export const AddCategory = ({ addCategory, categoryName }) => {
 
   return (
     <>
-    <ToastContainer />
-    <form onSubmit={handleSubmit} aria-label="form">
-      <input
-        type="text"
-        placeholder="Search GIF"
-        value={inputValue}
-        onChange={handleInputChange}
-      />
-    </form>
+      <ToastContainer />
+      <form onSubmit={handleSubmit} aria-label="form">
+        <input
+          type="text"
+          placeholder="Search GIF"
+          value={inputValue}
+          onChange={handleInputChange}
+        />
+      </form>
     </>
   );
 };

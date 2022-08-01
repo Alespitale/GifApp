@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 
-
 export const getGifs = async (category) => {
   const API_KEY = "8qUeVcS0xJkgNHdnO7RCqnIrohsbULUl";
 

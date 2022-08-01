@@ -7,6 +7,7 @@ exports[`Test of <GifItem /> Has to match with snapshot 1`] = `
   >
     <img
       alt="Dragon Ball"
+      loading="lazy"
       src="https://dragonball.com/goku.jpg"
     />
   </div>

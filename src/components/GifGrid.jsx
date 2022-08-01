@@ -2,6 +2,7 @@ import { useFetchGif } from "../hooks/useFetchGif";
 import { GifItem } from "./GifItem";
 import { ButtonGeneral } from "./ButtonGeneral";
 import PropTypes from "prop-types";
+import "../styles/GifGrid.css";
 
 export const GifGrid = ({ category, clear }) => {
   const { img, loading } = useFetchGif(category);
@@ -9,8 +10,15 @@ export const GifGrid = ({ category, clear }) => {
   return (
     <>
       <div className="category-container">
-        <div className="shadowBox"><h3 className="rainbow rainbow_text_animated">{category}</h3></div>
-        <ButtonGeneral data-testid='delete button' onClick={() => clear(category)}>CLEAR</ButtonGeneral>
+        <div className="shadowBox">
+          <h3 className="rainbow rainbow_text_animated">{category}</h3>
+        </div>
+        <ButtonGeneral
+          data-testid="delete button"
+          onClick={() => clear(category)}
+        >
+          CLEAR
+        </ButtonGeneral>
       </div>
       <div className="card-grid">
         {loading ? (
