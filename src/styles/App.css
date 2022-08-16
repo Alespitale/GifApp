@@ -21,6 +21,7 @@ h3 {
 
 .lnr-moon,
 .lnr-sun {
+  display:flex;
   position: absolute;
   color: white;
   font-size: 30px;
@@ -29,6 +30,11 @@ h3 {
   margin: 1rem;
   cursor: pointer;
   opacity: 0.5;
+}
+
+.lnr-sun {
+  color:white;
+  display:none
 }
 
 .dark-mode {

@@ -1,11 +1,9 @@
 export const useGoUp = () => {
-  const goUp = document.querySelector(".lnr-arrow-up-circle");
-  goUp.addEventListener("click", () => {
-    document.body.scrollIntoView({
-      behavior: "smooth",
+  document.body.scrollIntoView({
+    behavior: "smooth",
       block: "start",
     });
-  });
+  const goUp = document.querySelector(".lnr-arrow-up-circle");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
       goUp.style.transform = "scale(1)";

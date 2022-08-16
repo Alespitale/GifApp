@@ -7,6 +7,7 @@ export const App = () => {
   return (
     <>
       <span className="lnr lnr-moon" onClick={useDarkMode}></span>
+      <span className="lnr lnr-sun" onClick={useDarkMode}></span>
       <LiveTitle />
       <InputBarAndGrid />
       <span className="lnr lnr-arrow-up-circle" onClick={useGoUp}></span>
